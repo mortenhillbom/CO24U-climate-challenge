@@ -6,38 +6,12 @@ export const exampleSuppliers = [
       {
         content: (
           <>
-            <StatusDot color="red" />
+            <StatusDot color="green" />
             Stella Steel ABG
           </>
         ),
       },
-      { content: "100" },
-    ],
-  },
-  {
-    cells: [
-      {
-        content: (
-          <>
-            <StatusDot color="red" />
-            Miners Inc
-          </>
-        ),
-      },
-      { content: "100" },
-    ],
-  },
-  {
-    cells: [
-      {
-        content: (
-          <>
-            <StatusDot color="yellow" />
-            Something
-          </>
-        ),
-      },
-      { content: "100" },
+      { content: "87" },
     ],
   },
   {
@@ -46,11 +20,92 @@ export const exampleSuppliers = [
         content: (
           <>
             <StatusDot color="green" />
-            Whatever
+            Miners Inc
           </>
         ),
       },
-      { content: "100" },
+      { content: "69" },
+    ],
+  },
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="yellow" />
+            ALFUT INC
+          </>
+        ),
+      },
+      { content: "40" },
+    ],
+  },
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="red" />
+            Shakya Shipping AS
+          </>
+        ),
+      },
+      { content: "12" },
+    ],
+  },
+];
+
+export const exampleCustomers = [
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="red" />
+            Volkswagen
+          </>
+        ),
+      },
+      { content: "12" },
+    ],
+  },
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="red" />
+            Audi
+          </>
+        ),
+      },
+      { content: "20" },
+    ],
+  },
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="yellow" />
+            Scatec
+          </>
+        ),
+      },
+      { content: "49" },
+    ],
+  },
+  {
+    cells: [
+      {
+        content: (
+          <>
+            <StatusDot color="green" />
+            ERY Semiconductor
+          </>
+        ),
+      },
+      { content: "86" },
     ],
   },
 ];

@@ -57,7 +57,27 @@ export default function DataInput(): JSX.Element {
                 >
                   {({ fieldProps }) => <TextField {...fieldProps} />}
                 </Field>
-                <Button type="submit" appearance="primary">
+                <Field
+                  name="energy1"
+                  defaultValue=""
+                  label="Energy consumption"
+                  isRequired
+                >
+                  {({ fieldProps }) => <TextField {...fieldProps} />}
+                </Field>
+                <Field
+                  name="energy2"
+                  defaultValue=""
+                  label="Energy source"
+                  isRequired
+                >
+                  {({ fieldProps }) => <TextField {...fieldProps} />}
+                </Field>
+                <Button
+                  style={{ marginTop: 24 }}
+                  type="submit"
+                  appearance="primary"
+                >
                   Submit
                 </Button>
               </form>

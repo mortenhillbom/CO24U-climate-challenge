@@ -5,7 +5,7 @@ import PageHeader from "@atlaskit/page-header";
 import { Main } from "@atlaskit/page-layout";
 import { Container, Subtitle, Row, Space } from "components/StyledComponents";
 import Metric from "components/Metric";
-import { exampleSuppliers, exampleKPIs } from "mockData";
+import { exampleCustomers, exampleKPIs } from "mockData";
 import { useRouter } from "next/router";
 import styles from "../../../styles/Home.module.css";
 
@@ -102,7 +102,7 @@ export default function Supplier(): JSX.Element {
                     { content: "Taxonomy alignment", key: "alignment" },
                   ],
                 }}
-                rows={exampleSuppliers}
+                rows={exampleCustomers}
               />
             </div>
           </Row>
