@@ -29,7 +29,7 @@ export default function DataInput(): JSX.Element {
               <form {...formProps}>
                 <Field
                   name="companyname"
-                  defaultValue=""
+                  defaultValue="Volkswagen"
                   label="Company name"
                   isRequired
                 >
@@ -37,7 +37,7 @@ export default function DataInput(): JSX.Element {
                 </Field>
                 <Field
                   name="password"
-                  defaultValue=""
+                  defaultValue="********"
                   label="Password"
                   isRequired
                   transform={(s) =>
@@ -55,7 +55,7 @@ export default function DataInput(): JSX.Element {
                   appearance="primary"
                   style={{ marginTop: 24 }}
                 >
-                  Submit
+                  Log in
                 </Button>
               </form>
             )}
