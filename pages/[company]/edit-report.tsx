@@ -19,7 +19,7 @@ export default function DataInput(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container>
+      <Container style={{ maxWidth: 500 }}>
         <Main>
           <PageHeader>Input data</PageHeader>
           <Form onSubmit={(data) => console.log("form data", data)}>
