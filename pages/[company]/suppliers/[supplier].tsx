@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { BreadcrumbsItem, BreadcrumbsStateless } from "@atlaskit/breadcrumbs";
 import DynamicTable from "@atlaskit/dynamic-table";
-import PremiumIcon from "@atlaskit/icon/glyph/premium";
 import PageHeader from "@atlaskit/page-header";
 import { Main } from "@atlaskit/page-layout";
 import { Container, Subtitle, Row, Space } from "components/StyledComponents";
@@ -13,7 +12,7 @@ import styles from "../../../styles/Home.module.css";
 export default function Supplier(): JSX.Element {
   const router = useRouter();
   const { supplier, company } = router.query;
-  
+
   const breadcrumbs = (
     <BreadcrumbsStateless>
       <BreadcrumbsItem text={company as string} key="company" />
@@ -42,17 +41,17 @@ export default function Supplier(): JSX.Element {
             <Metric
               value={exampleKPIs.scope1}
               label="Scope 1 emissions"
-              Icon={PremiumIcon}
+              iconName="emission"
             />
             <Metric
               value={exampleKPIs.taxonomyAlignment}
               label="Taxonomy alignment"
-              Icon={PremiumIcon}
+              iconName="green_earth"
             />
             <Metric
               value={exampleKPIs.scope2}
               label="Scope 1 + 2 emissions"
-              Icon={PremiumIcon}
+              iconName="emission"
             />
           </Row>
           <Subtitle>Emission contribution</Subtitle>
@@ -67,22 +66,22 @@ export default function Supplier(): JSX.Element {
             <Metric
               value={exampleKPIs.energyConsumption}
               label="Energy consumption"
-              Icon={PremiumIcon}
+              iconName="energy"
             />
             <Metric
               value={exampleKPIs.rawMaterial}
               label="Raw material"
-              Icon={PremiumIcon}
+              iconName="material"
             />
             <Metric
               value={exampleKPIs.transportation}
               label="Transportation"
-              Icon={PremiumIcon}
+              iconName="boat"
             />
             <Metric
               value={exampleKPIs.directEmissions}
               label="Direct emissions"
-              Icon={PremiumIcon}
+              iconName="emission"
             />
           </Row>
           <Subtitle>Customer dashboard</Subtitle>
@@ -94,17 +93,7 @@ export default function Supplier(): JSX.Element {
               paddingBottom: 24,
             }}
           >
-            <div
-              style={{
-                height: 400,
-                width: "50%",
-                paddingTop: 70,
-                background: "green",
-                textAlign: "center",
-              }}
-            >
-              MAP
-            </div>
+            <img alt="map" src="/assets/map2.png" height={400} />
             <div style={{ width: "50%", marginLeft: 24 }}>
               <DynamicTable
                 head={{

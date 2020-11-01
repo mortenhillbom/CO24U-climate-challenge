@@ -2,7 +2,6 @@
 import Head from "next/head";
 import { BreadcrumbsItem, BreadcrumbsStateless } from "@atlaskit/breadcrumbs";
 import DynamicTable from "@atlaskit/dynamic-table";
-import PremiumIcon from "@atlaskit/icon/glyph/premium";
 import PageHeader from "@atlaskit/page-header";
 import { Main } from "@atlaskit/page-layout";
 import { Container, Subtitle, Row, Space } from "components/StyledComponents";
@@ -43,7 +42,7 @@ export default function Home(): JSX.Element {
             <Metric
               value={exampleKPIs.scope1}
               label="Aggregated emissions from suppliers"
-              Icon={PremiumIcon}
+              iconName="green_earth"
             />
             <Space />
           </Row>
@@ -57,19 +56,9 @@ export default function Home(): JSX.Element {
               paddingBottom: 24,
             }}
           >
+            <img alt="map" src="/assets/map.png" height={400} />
             <div
-              style={{
-                height: 400,
-                width: "50%",
-                paddingTop: 70,
-                background: "green",
-                textAlign: "center",
-              }}
-            >
-              MAP
-            </div>
-            <div
-              style={{ width: "50%", marginLeft: 24 }}
+              style={{ width: "50%", marginLeft: 24, cursor: "pointer" }}
               onClick={() =>
                 router.push(`/${company}/suppliers/Stella Steel ABG`)
               }
