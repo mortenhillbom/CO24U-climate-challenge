@@ -5,9 +5,13 @@ import Button from "@atlaskit/button";
 import TextField from "@atlaskit/textfield";
 import PageHeader from "@atlaskit/page-header";
 import { Main } from "@atlaskit/page-layout";
-import styles from "../styles/Home.module.css";
+import { useRouter } from "next/router";
+import styles from "../../styles/Home.module.css";
 
 export default function DataInput(): JSX.Element {
+  const router = useRouter();
+  const { company } = router.query;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +27,7 @@ export default function DataInput(): JSX.Element {
               <form {...formProps}>
                 <Field
                   name="companyname"
-                  defaultValue=""
+                  defaultValue={company}
                   label="Company name"
                   isRequired
                 >

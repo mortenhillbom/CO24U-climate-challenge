@@ -24,11 +24,13 @@ interface NavOption {
 
 function TraX({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const { company } = router.query;
+
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const navLinks: NavOption[] = [
-    { url: "/", title: "Group overview", Icon: DashboardIcon },
-    { url: "/dashboard", title: "Supplier dashboard", Icon: GearIcon },
-    { url: "/data-input", title: "Data input", Icon: AddIcon },
+    { url: `/${company}`, title: "Overview", Icon: DashboardIcon },
+    { url: `/${company}/suppliers`, title: "Your suppliers", Icon: GearIcon },
+    { url: `/${company}/edit-report`, title: "Report", Icon: AddIcon },
   ];
 
   return (
@@ -42,7 +44,7 @@ function TraX({ Component, pageProps }: AppProps) {
             <AkContainerTitle
               href="/"
               icon={<JiraIcon size="small" />}
-              text="Taxonomy woho"
+              text="TraX"
             />
           )}
         >
@@ -53,7 +55,7 @@ function TraX({ Component, pageProps }: AppProps) {
                 <AkNavigationItem
                   icon={<Icon label={title} size="medium" />}
                   text={title}
-                  isSelected={router.route === url}
+                  isSelected={router.asPath === url}
                 />
               </Link>
             );

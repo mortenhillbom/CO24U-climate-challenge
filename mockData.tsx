@@ -7,7 +7,7 @@ export const exampleSuppliers = [
         content: (
           <>
             <StatusDot color="red" />
-            BMW
+            Stella Steel ABG
           </>
         ),
       },
@@ -20,7 +20,7 @@ export const exampleSuppliers = [
         content: (
           <>
             <StatusDot color="red" />
-            Audi
+            Miners Inc
           </>
         ),
       },

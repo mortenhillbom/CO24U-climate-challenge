@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import Head from "next/head";
 import { BreadcrumbsItem, BreadcrumbsStateless } from "@atlaskit/breadcrumbs";
 import DynamicTable from "@atlaskit/dynamic-table";
@@ -7,13 +8,17 @@ import { Main } from "@atlaskit/page-layout";
 import { Container, Subtitle, Row, Space } from "components/StyledComponents";
 import Metric from "components/Metric";
 import { exampleSuppliers, exampleKPIs } from "mockData";
-import styles from "../styles/Home.module.css";
+import { useRouter } from "next/router";
+import styles from "../../styles/Home.module.css";
 
 export default function Home(): JSX.Element {
+  const router = useRouter();
+  const { company } = router.query;
+
   const breadcrumbs = (
     <BreadcrumbsStateless>
-      <BreadcrumbsItem text="Some project" key="Some project" />
-      <BreadcrumbsItem text="Parent page" key="Parent page" />
+      <BreadcrumbsItem text="Home" key="home" />
+      <BreadcrumbsItem text="Overview" key="overview" />
     </BreadcrumbsStateless>
   );
 
@@ -25,7 +30,7 @@ export default function Home(): JSX.Element {
       </Head>
       <Container>
         <Main>
-          <PageHeader breadcrumbs={breadcrumbs}>Volkswagen</PageHeader>
+          <PageHeader breadcrumbs={breadcrumbs}>{company}</PageHeader>
           <Row
             style={{
               justifyContent: "space-between",
@@ -63,7 +68,12 @@ export default function Home(): JSX.Element {
             >
               MAP
             </div>
-            <div style={{ width: "50%", marginLeft: 24 }}>
+            <div
+              style={{ width: "50%", marginLeft: 24 }}
+              onClick={() =>
+                router.push(`/${company}/suppliers/Stella Steel ABG`)
+              }
+            >
               <DynamicTable
                 head={{
                   cells: [
